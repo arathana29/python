@@ -1,0 +1,624 @@
+1. Variables & Data Types
+
+Definition
+
+Variables are used to store values in memory.
+
+Example Program
+a = 10              # Integer
+b = "Arathana"      # String
+c = 'A'             # Character (String of length 1)
+d = 12.89           # Float
+e = True            # Boolean
+f = None            # NoneType
+
+print(a, b, c, d, e, f)
+
+Output
+
+10 Arathana A 12.89 True None
+
+Data Types 
+
+Program
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(f))
+
+Output
+
+<class 'int'>
+<class 'str'>
+<class 'str'>
+<class 'float'>
+<class 'bool'>
+<class 'NoneType'>
+
+2. Type Casting
+
+Definition
+
+Type Casting is converting one data type into another.
+
+Example Program
+a = 10
+
+b = str(a)
+print(b)
+
+c = "45"
+d = int(c)
+print(d)
+
+e = 12.8
+f = int(e)
+print(f)
+
+g = 10
+h = bool(g)
+print(h)
+
+Output
+10
+45
+12
+True
+
+Notes
+str()    # Convert to String
+int()    # Convert to Integer
+float()  # Convert to Float
+bool()   # Convert to Boolean
+
+3. User Input
+
+Definition
+
+Input allows users to enter data while the program is running.
+
+Example Program
+name = input("Enter Name: ")
+age = int(input("Enter Age: "))
+
+print(name)
+print(age)
+
+Sample Input
+
+Arathana
+19
+Output
+
+Arathana
+19
+
+Notes
+
+input()
+
+always returns a string.
+
+Convert if needed:
+
+age = int(input())
+salary = float(input())
+
+4. Operators
+
+Arithmetic Operators
+
+Operator	Meaning
++	        Addition
+-	        Subtraction
+*	        Multiplication
+/	        Division
+%	        Modulus
+**	        Power
+//	        Floor Division
+
+Example Program
+a = 10
+b = 3
+
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+print(a**b)
+print(a//b)
+
+Output
+
+13
+7
+30
+3.3333333333
+1
+1000
+3
+
+5. Conditional Statements
+
+if Statement
+
+Program
+age = 18
+
+if age >= 18:
+    print("Eligible")
+
+Output
+Eligible
+
+if else Statement
+
+Program
+mark = 30
+
+if mark >= 35:
+    print("Pass")
+else:
+    print("Fail")
+
+Output
+Fail
+
+if elif else Statement
+
+Program
+score = 80
+
+if score < 35:
+    print("Poor")
+elif score < 70:
+    print("Average")
+else:
+    print("Good")
+
+Output
+
+Good
+
+Comparison Operators
+==
+!=
+>
+<
+>=
+<=
+
+Logical Operators
+and
+or
+not
+
+6. Loops
+
+For Loop
+
+Definition
+
+Used when the number of iterations is known.
+
+Program
+for i in range(1, 6):
+    print(i)
+
+Output
+1
+2
+3
+4
+5
+
+Range Function
+
+Syntax
+range(start, stop, step)
+
+Program
+for i in range(0, 10, 2):
+    print(i)
+
+Output
+0
+2
+4
+6
+8
+
+While Loop
+
+Definition
+
+Used when the number of iterations is unknown.
+
+Program
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+
+Output
+1
+2
+3
+4
+5
+
+7. Pattern Programs
+
+Star Pattern
+
+Program
+for i in range(1, 6):
+    print("*" * i)
+Output
+*
+**
+***
+****
+*****
+
+Number Pattern
+Program
+for i in range(1, 6):
+    for j in range(1, i+1):
+        print(j, end="")
+    print()
+Output
+1
+12
+123
+1234
+12345
+
+8. Lists
+
+Definition
+
+A list is a mutable collection that stores multiple values.
+
+Program
+numbers = [10, 20, 30, 40]
+Access Element
+print(numbers[0])
+
+Output
+
+10
+
+Add Element
+numbers.append(50)
+
+Remove Element
+numbers.remove(20)
+
+Length
+print(len(numbers))
+
+Traverse List
+for num in numbers:
+    print(num)
+
+9. Tuples
+
+Definition
+
+A tuple is an immutable collection.
+
+Program
+t = (10, 20, 30)
+print(t[0])
+
+Output
+10
+
+Note
+
+Tuple values cannot be modified.
+
+10. Sets
+
+Definition
+
+A set stores unique values.
+
+Program
+s = {1, 2, 3, 3, 4}
+
+print(s)
+Output
+{1, 2, 3, 4}
+
+Remove Duplicates
+
+Program
+nums = [1,2,2,3,3]
+unique = list(set(nums))
+print(unique)
+Output
+[1, 2, 3]
+
+11. Dictionaries
+
+Definition
+
+Stores data in Key : Value format.
+
+Program
+student = {
+    "name": "Arathana",
+    "age": 20,
+    "dept": "AI&DS"
+}
+Access
+print(student["name"])
+
+Output
+Arathana
+
+Add
+student["city"] = "Chennai"
+
+Traverse
+for key, value in student.items():
+    print(key, value)
+
+12. Functions
+Definition
+
+Functions are reusable blocks of code.
+
+Program
+def greet():
+    print("Hello")
+
+greet()
+Output
+Hello
+
+Function with Parameters
+Program
+def add(a, b):
+    print(a+b)
+
+add(10, 20)
+Output
+30
+
+Return Statement
+
+Program
+def add(a, b):
+    return a+b
+
+result = add(10,20)
+
+print(result)
+Output
+30
+
+13. Object-Oriented Programming (OOP)
+
+Class and Object
+
+Program
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print(self.name)
+
+s1 = Student("Arathana")
+
+s1.display()
+Output
+Arathana
+
+14. Inheritance
+
+Definition
+
+Allows a child class to inherit properties from a parent class.
+
+Program
+class Parent:
+    def house(self):
+        print("House")
+
+class Child(Parent):
+    pass
+
+c = Child()
+
+c.house()
+Output
+House
+
+Types
+1.Single Inheritance
+2.Multiple Inheritance
+3.Multilevel Inheritance
+4.Hierarchical Inheritance
+5.Hybrid Inheritance
+
+15. Polymorphism
+
+Definition
+
+One method behaves differently for different objects.
+
+Program
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+d = Dog()
+c = Cat()
+
+d.sound()
+c.sound()
+Output
+Bark
+Meow
+
+16. Encapsulation
+
+Definition
+
+Hiding data from direct access.
+
+Program
+class Company:
+
+    def __init__(self):
+        self.__name = "Google"
+
+    def get_name(self):
+        return self.__name
+
+c = Company()
+
+print(c.get_name())
+Output
+Google
+
+17. Exception Handling
+
+Definition
+
+Used to handle runtime errors.
+
+Program
+try:
+    a = int(input())
+    b = int(input())
+
+    print(a+b)
+
+except ValueError:
+    print("Invalid Input")
+Output
+Invalid Input
+Finally Block
+
+Program
+try:
+    print("Hello")
+finally:
+    print("Always Executes")
+Output
+Hello
+Always Executes
+
+18. File Handling
+
+Write File
+
+Program
+file = open("data.txt", "w")
+
+file.write("Hello Python")
+
+file.close()
+
+Read File
+
+Program
+file = open("data.txt", "r")
+
+print(file.read())
+
+file.close()
+Output
+Hello Python
+
+Best Practice
+with open("data.txt", "r") as file:
+    print(file.read())
+
+19. Important Python Interview Programs
+
+Swap Two Numbers
+
+Program
+a = 10
+b = 20
+
+a, b = b, a
+
+print(a)
+print(b)
+Output
+20
+10
+
+Factorial
+
+Program
+n = 5
+
+fact = 1
+
+for i in range(1, n+1):
+    fact *= i
+
+print(fact)
+Output
+120
+
+Prime Number
+
+Program
+n = 7
+
+is_prime = True
+
+for i in range(2, n):
+    if n % i == 0:
+        is_prime = False
+
+print(is_prime)
+
+Output
+True
+
+Fibonacci Series
+
+Program
+a, b = 0, 1
+
+for i in range(10):
+    print(a, end=" ")
+    a, b = b, a+b
+
+Output
+0 1 1 2 3 5 8 13 21 34
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
